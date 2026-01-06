@@ -1,0 +1,16 @@
+package Array;
+
+public class ContributionTechnique {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3};
+        int n = arr.length;
+        int totalSum = 0;
+
+        for (int i = 0; i < n; i++) {
+            int contibution = arr[i] * (i + 1) * (n - i);
+            System.out.println(arr[i] + " contributes = " + contibution + " times.");
+            totalSum += contibution;
+        }
+        System.out.println("Sum of subarray= "+totalSum);
+    }
+}
