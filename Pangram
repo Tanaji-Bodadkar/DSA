@@ -1,0 +1,31 @@
+public class Pangram{
+  public static boolean isPangram(String s){
+    
+      boolean present = new boolean[26];
+
+      s = s.toUpperCase();
+
+      for(int i=0 ; i < s.length ; i++){
+          char ch = s.charAt(i);
+
+          if(ch >= 'a' && ch <='z'){
+            present[ch - 'a']=true;
+          }
+      }
+      for(int i=0;i<26;i++){
+           if(!present){
+            return false;
+           } 
+          }
+      return true;
+  }
+public static void main(String[] args){
+  String s = "The quick Brown FOX jumps over the lazy dog";
+    if(isPangram){
+      System.out.println("is Pangram");
+    }
+    else{
+      System.out.println("Not a Pangram");
+    }
+  }
+}
